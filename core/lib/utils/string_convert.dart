@@ -111,17 +111,6 @@ class StringConvert {
     }
   }
 
-  static String getContentOriginal(String content) {
-    try {
-      final emailDocument = parse(content);
-      final contentOriginal = emailDocument.body?.innerHtml ?? content;
-      return contentOriginal;
-    } catch (e) {
-      logError('StringConvert::getContentOriginal:Exception = $e');
-      return content;
-    }
-  }
-
   /// Checks if the given text is a table (supports Markdown or ASCII art format).
   static bool isTextTable(String text) {
     final lines =

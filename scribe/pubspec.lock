@@ -1002,11 +1002,11 @@ packages:
     dependency: transitive
     description:
       path: sanitize_html
-      ref: support_mail
-      resolved-ref: fda32cde4d4baadaa988477f498ab6622ee79987
+      ref: "fix/missing-internal-css"
+      resolved-ref: "4990dd9cb5c887be8505aca057fc258142f16448"
       url: "https://github.com/linagora/dart-neats.git"
     source: git
-    version: "2.1.0"
+    version: "3.0.0"
   shelf:
     dependency: transitive
     description:
