@@ -2,7 +2,6 @@ import 'package:core/data/network/config/dynamic_url_interceptors.dart';
 import 'package:core/presentation/resources/image_paths.dart';
 import 'package:core/presentation/utils/app_toast.dart';
 import 'package:core/presentation/utils/responsive_utils.dart';
-import 'package:core/utils/application_manager.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide SearchController, State;
@@ -21,6 +20,7 @@ import 'package:rxdart/subjects.dart';
 import 'package:tmail_ui_user/features/caching/caching_manager.dart';
 import 'package:tmail_ui_user/features/composer/domain/usecases/send_email_interactor.dart';
 import 'package:tmail_ui_user/features/composer/presentation/manager/composer_manager.dart';
+import 'package:tmail_ui_user/features/download/presentation/controllers/download_controller.dart';
 import 'package:tmail_ui_user/features/email/domain/usecases/delete_email_permanently_interactor.dart';
 import 'package:tmail_ui_user/features/email/domain/usecases/delete_multiple_emails_permanently_interactor.dart';
 import 'package:tmail_ui_user/features/email/domain/usecases/get_restored_deleted_message_interactor.dart';
@@ -69,7 +69,6 @@ import 'package:tmail_ui_user/features/mailbox_dashboard/domain/usecases/save_re
 import 'package:tmail_ui_user/features/mailbox_dashboard/domain/usecases/store_email_sort_order_interactor.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/action/download_ui_action.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/controller/app_grid_dashboard_controller.dart';
-import 'package:tmail_ui_user/features/download/presentation/controllers/download_controller.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/controller/mailbox_dashboard_controller.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/controller/search_controller.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/controller/spam_report_controller.dart';
@@ -191,7 +190,6 @@ const fallbackGenerators = {
   MockSpec<LanguageCacheManager>(),
   MockSpec<RemoveAllComposerCacheOnWebInteractor>(),
   MockSpec<RemoveComposerCacheByIdOnWebInteractor>(),
-  MockSpec<ApplicationManager>(),
   MockSpec<GetAllIdentitiesInteractor>(),
   MockSpec<GetQuotasInteractor>(),
   MockSpec<ToastManager>(),
@@ -256,7 +254,6 @@ void main() {
   final imagePaths = ImagePaths();
   final responsiveUtils = MockResponsiveUtils();
   final uuid = MockUuid();
-  final applicationManager = MockApplicationManager();
 
   final getSessionInteractor = MockGetSessionInteractor();
   final getAuthenticatedAccountInteractor = MockGetAuthenticatedAccountInteractor();
@@ -340,7 +337,6 @@ void main() {
       Get.put<ImagePaths>(imagePaths);
       Get.put<ResponsiveUtils>(responsiveUtils);
       Get.put<Uuid>(uuid);
-      Get.put<ApplicationManager>(applicationManager);
       Get.put<GetSessionInteractor>(getSessionInteractor);
       Get.put<GetAuthenticatedAccountInteractor>(getAuthenticatedAccountInteractor);
       Get.put<UpdateAccountCacheInteractor>(updateAccountCacheInteractor);
