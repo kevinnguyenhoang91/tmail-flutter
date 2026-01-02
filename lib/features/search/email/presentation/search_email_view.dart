@@ -20,6 +20,7 @@ import 'package:tmail_ui_user/features/base/widget/popup_menu/popup_menu_item_ac
 import 'package:tmail_ui_user/features/base/widget/scrollbar_list_view.dart';
 import 'package:tmail_ui_user/features/email/presentation/extensions/presentation_email_extension.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/domain/model/recent_search.dart';
+import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/extensions/labels/handle_logic_label_extension.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/model/search/email_receive_time_type.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/model/search/email_sort_order_type.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/model/search/quick_search_filter.dart';
@@ -728,16 +729,13 @@ class SearchEmailView extends GetWidget<SearchEmailController>
         final isShowingEmailContent =
             dashboardController.selectedEmail.value?.id == presentationEmail.id;
 
-        final isLabelCapabilitySupported = dashboardController.isLabelCapabilitySupported;
+        final isLabelAvailable = dashboardController.isLabelAvailable;
 
         final labelController = dashboardController.labelController;
 
-        final isLabelSettingEnabled =
-            labelController.isLabelSettingEnabled.isTrue;
-
         List<Label>? emailLabels;
 
-        if (isLabelCapabilitySupported && isLabelSettingEnabled) {
+        if (isLabelAvailable) {
           emailLabels = presentationEmail.getLabelList(
             labelController.labels,
           );

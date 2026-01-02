@@ -23,6 +23,7 @@ import 'package:tmail_ui_user/features/mailbox/domain/state/mark_as_mailbox_read
 import 'package:tmail_ui_user/features/mailbox/domain/state/move_folder_content_state.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/domain/model/spam_report_state.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/extensions/handle_open_context_menu_extension.dart';
+import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/extensions/labels/handle_logic_label_extension.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/extensions/open_and_close_composer_extension.dart';
 import 'package:tmail_ui_user/features/mailbox_dashboard/presentation/widgets/recover_deleted_message_loading_banner_widget.dart';
 import 'package:tmail_ui_user/features/manage_account/presentation/extensions/vacation_response_extension.dart';
@@ -594,18 +595,15 @@ class ThreadView extends GetWidget<ThreadController>
         direction,
       ),
       child: Obx(() {
-        final isLabelCapabilitySupported = controller
-            .mailboxDashBoardController.isLabelCapabilitySupported;
+        final isLabelAvailable = controller
+            .mailboxDashBoardController.isLabelAvailable;
 
         final labelController =
             controller.mailboxDashBoardController.labelController;
 
-        final isLabelSettingEnabled =
-            labelController.isLabelSettingEnabled.isTrue;
-
         List<Label>? emailLabels;
 
-        if (isLabelCapabilitySupported && isLabelSettingEnabled) {
+        if (isLabelAvailable) {
           emailLabels = presentationEmail.getLabelList(
             labelController.labels,
           );
