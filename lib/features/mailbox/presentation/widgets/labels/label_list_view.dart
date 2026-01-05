@@ -1,18 +1,23 @@
 import 'package:core/presentation/resources/image_paths.dart';
 import 'package:flutter/material.dart';
 import 'package:labels/model/label.dart';
+import 'package:tmail_ui_user/features/mailbox/presentation/utils/labels/label_method_action_define.dart';
 import 'package:tmail_ui_user/features/mailbox/presentation/widgets/labels/label_list_item.dart';
 
 class LabelListView extends StatelessWidget {
   final List<Label> labels;
   final ImagePaths imagePaths;
   final bool isDesktop;
+  final bool isMobileResponsive;
+  final OnOpenLabelContextMenuAction? onOpenContextMenu;
 
   const LabelListView({
     super.key,
     required this.labels,
     required this.imagePaths,
     this.isDesktop = false,
+    this.isMobileResponsive = false,
+    this.onOpenContextMenu,
   });
 
   @override
@@ -28,6 +33,8 @@ class LabelListView extends StatelessWidget {
           label: labels[index],
           imagePaths: imagePaths,
           isDesktop: isDesktop,
+          isMobileResponsive: isMobileResponsive,
+          onOpenContextMenu: onOpenContextMenu,
         );
       },
     );
