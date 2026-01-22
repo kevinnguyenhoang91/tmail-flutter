@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2025-12-15T14:32:52.563522",
+  "@@last_modified": "2026-01-22T17:41:07.331063",
   "initializing_data": "Initializing data...",
   "@initializing_data": {
     "type": "text",
@@ -4862,6 +4862,24 @@
     "placeholders_order": [],
     "placeholders": {}
   },
+  "aiScribe": "AI Scribe",
+  "@aiScribe": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "aiScribeSettingExplanation": "Use AI to help write and improve your emails",
+  "@aiScribeSettingExplanation": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
+  "aiScribeToggleDescription": "Enable AI Scribe",
+  "@aiScribeToggleDescription": {
+    "type": "text",
+    "placeholders_order": [],
+    "placeholders": {}
+  },
   "showMoreAttachmentButton": "Show +{count} more",
   "@showMoreAttachmentButton": {
     "type": "text",
@@ -5126,12 +5144,6 @@
   },
   "startToAddFavoritesEmails": "Start to add favorites emails",
   "@startToAddFavoritesEmails": {
-    "type": "text",
-    "placeholders_order": [],
-    "placeholders": {}
-  },
-  "aiAssistant": "AI assistant",
-  "@aiAssistant": {
     "type": "text",
     "placeholders_order": [],
     "placeholders": {}

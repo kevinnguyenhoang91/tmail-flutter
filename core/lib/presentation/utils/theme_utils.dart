@@ -18,9 +18,9 @@ class ThemeUtils {
       dividerTheme: _dividerTheme,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       scrollbarTheme: ScrollbarThemeData(
-        thickness: WidgetStateProperty.all(6.0),
-        radius: const Radius.circular(10.0),
-        thumbColor: WidgetStateProperty.all(AppColor.thumbScrollbarColor)),
+          thickness: WidgetStateProperty.all(6.0),
+          radius: const Radius.circular(10.0),
+          thumbColor: WidgetStateProperty.all(AppColor.thumbScrollbarColor)),
     );
   }
 
@@ -36,11 +36,10 @@ class ThemeUtils {
       letterSpacing: 0.25,
     ),
     bodySmall: TextStyle(
-      fontWeight: FontWeight.w400,
-      letterSpacing: 0.0,
-      fontSize: 13,
-      height: 16 / 13
-    ),
+        fontWeight: FontWeight.w400,
+        letterSpacing: 0.0,
+        fontSize: 13,
+        height: 16 / 13),
     labelLarge: TextStyle(
       fontWeight: FontWeight.w500,
       letterSpacing: 0.1,
@@ -97,52 +96,57 @@ class ThemeUtils {
     Color? color,
     FontWeight? fontWeight,
     double? fontSize,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w500,
-    letterSpacing: 0.0,
-    fontSize: fontSize ?? 16,
-    height: 20 / (fontSize ?? 16),
-    color: color,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w500,
+        letterSpacing: 0.0,
+        fontSize: fontSize ?? 16,
+        height: 20 / (fontSize ?? 16),
+        color: color,
+      );
 
   static TextStyle textStyleBodyBody2({
     Color? color,
     Color? backgroundColor,
     FontWeight? fontWeight,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w400,
-    letterSpacing: 0.0,
-    fontSize: 15,
-    height: 20 / 15,
-    color: color,
-    backgroundColor: backgroundColor,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w400,
+        letterSpacing: 0.0,
+        fontSize: 15,
+        height: 20 / 15,
+        color: color,
+        backgroundColor: backgroundColor,
+      );
 
   static TextStyle textStyleBodyBody3({
     Color? color,
     FontWeight? fontWeight,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w400,
-    letterSpacing: 0.0,
-    fontSize: 14,
-    height: 18 / 14,
-    color: color,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w400,
+        letterSpacing: 0.0,
+        fontSize: 14,
+        height: 18 / 14,
+        color: color,
+      );
 
   static TextStyle textStyleBodyContact({
     Color? color,
     Color? backgroundColor,
     FontWeight? fontWeight,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w600,
-    letterSpacing: 0.0,
-    fontSize: 15,
-    height: 20 / 15,
-    color: color,
-    backgroundColor: backgroundColor,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w600,
+        letterSpacing: 0.0,
+        fontSize: 15,
+        height: 20 / 15,
+        color: color,
+        backgroundColor: backgroundColor,
+      );
 
-  static TextStyle textStyleBodySmallHeadline = defaultTextStyleInterFont.copyWith(
+  static TextStyle textStyleBodySmallHeadline =
+      defaultTextStyleInterFont.copyWith(
     fontWeight: FontWeight.w600,
     letterSpacing: -0.13,
     fontSize: 13,
@@ -153,48 +157,53 @@ class ThemeUtils {
   static TextStyle textStyleHeadingH6({
     Color? color,
     FontWeight? fontWeight,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w700,
-    letterSpacing: 0.0,
-    fontSize: 20,
-    height: 24 / 20,
-    color: color,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w700,
+        letterSpacing: 0.0,
+        fontSize: 20,
+        height: 24 / 20,
+        color: color,
+      );
 
   static TextStyle textStyleHeadingH5({
     Color? color,
     FontWeight? fontWeight,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w500,
-    letterSpacing: 0.0,
-    fontSize: 24,
-    height: 28 / 24,
-    color: color,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w500,
+        letterSpacing: 0.0,
+        fontSize: 24,
+        height: 28 / 24,
+        color: color,
+      );
 
   static TextStyle textStyleHeadingH4({
     Color? color,
     FontWeight? fontWeight,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w500,
-    letterSpacing: 0.0,
-    fontSize: 32,
-    height: 40 / 32,
-    color: color,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w500,
+        letterSpacing: 0.0,
+        fontSize: 32,
+        height: 40 / 32,
+        color: color,
+      );
 
   static TextStyle textStyleHeadingHeadingSmall({
     Color? color,
     FontWeight? fontWeight,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: fontWeight ?? FontWeight.w500,
-    letterSpacing: 0.0,
-    fontSize: 17,
-    height: 22 / 17,
-    color: color,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: fontWeight ?? FontWeight.w500,
+        letterSpacing: 0.0,
+        fontSize: 17,
+        height: 22 / 17,
+        color: color,
+      );
 
-  static TextStyle textStyleM3HeadlineSmall = defaultTextStyleInterFont.copyWith(
+  static TextStyle textStyleM3HeadlineSmall =
+      defaultTextStyleInterFont.copyWith(
     fontWeight: FontWeight.w600,
     letterSpacing: 0.0,
     fontSize: 24,
@@ -205,21 +214,22 @@ class ThemeUtils {
   static TextStyle textStyleInter700({
     Color? color,
     double? fontSize,
-  }) => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0.0,
-    fontSize: fontSize ?? 15,
-    height: 20 / (fontSize ?? 15),
-    color: color ?? Colors.black,
-  );
+  }) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: FontWeight.w700,
+        letterSpacing: 0.0,
+        fontSize: fontSize ?? 15,
+        height: 20 / (fontSize ?? 15),
+        color: color ?? Colors.black,
+      );
 
   static TextStyle textStyleInter500() => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0.0,
-    fontSize: 14,
-    height: 18 / 14,
-    color: Colors.black,
-  );
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.0,
+        fontSize: 14,
+        height: 18 / 14,
+        color: Colors.black,
+      );
 
   static final TextStyle textStyleInter400 = defaultTextStyleInterFont.copyWith(
     fontWeight: FontWeight.normal,
@@ -229,38 +239,42 @@ class ThemeUtils {
     color: Colors.black,
   );
 
-  static TextStyle textStyleM3LabelLarge({Color? color}) => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0.1,
-    fontSize: 14,
-    height: 20 / 14,
-    color: color ?? AppColor.primaryMain,
-  );
+  static TextStyle textStyleM3LabelLarge({Color? color}) =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.1,
+        fontSize: 14,
+        height: 20 / 14,
+        color: color ?? AppColor.primaryMain,
+      );
 
-  static TextStyle get textStyleM3LabelSmall => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0.5,
-    fontSize: 11,
-    height: 16 / 11,
-    color: AppColor.m3Tertiary,
-  );
+  static TextStyle get textStyleM3LabelSmall =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.5,
+        fontSize: 11,
+        height: 16 / 11,
+        color: AppColor.m3Tertiary,
+      );
 
-  static TextStyle get textStyleM3TitleSmall => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0.1,
-    fontSize: 14,
-    height: 20 / 14,
-    color: AppColor.m3Tertiary20,
-  );
+  static TextStyle get textStyleM3TitleSmall =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.1,
+        fontSize: 14,
+        height: 20 / 14,
+        color: AppColor.m3Tertiary20,
+      );
 
-  static TextStyle get textStyleM3TitleMedium => defaultTextStyleInterFont.copyWith(
-    fontFamily: ConstantsUI.fontApp,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0.15,
-    fontSize: 16,
-    height: 24 / 16,
-    color: AppColor.secondaryContrastText,
-  );
+  static TextStyle get textStyleM3TitleMedium =>
+      defaultTextStyleInterFont.copyWith(
+        fontFamily: ConstantsUI.fontApp,
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.15,
+        fontSize: 16,
+        height: 24 / 16,
+        color: AppColor.secondaryContrastText,
+      );
 
   static TextStyle textStyleM3BodyMedium1 = defaultTextStyleInterFont.copyWith(
     fontWeight: FontWeight.w400,
@@ -278,7 +292,8 @@ class ThemeUtils {
     color: AppColor.m3SurfaceBackground,
   );
 
-  static final TextStyle textStyleM3BodyMedium = defaultTextStyleInterFont.copyWith(
+  static final TextStyle textStyleM3BodyMedium =
+      defaultTextStyleInterFont.copyWith(
     fontWeight: FontWeight.w500,
     letterSpacing: 0.25,
     fontSize: 14,
@@ -295,28 +310,29 @@ class ThemeUtils {
   );
 
   static TextStyle textStyleAppShortcut() => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.normal,
-    letterSpacing: 0.0,
-    fontSize: 12,
-    height: 22.5 / 12,
-    color: AppColor.textPrimary,
-  );
+        fontWeight: FontWeight.normal,
+        letterSpacing: 0.0,
+        fontSize: 12,
+        height: 22.5 / 12,
+        color: AppColor.textPrimary,
+      );
 
-  static TextStyle textStyleContentCaption() => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.normal,
-    letterSpacing: 0,
-    fontSize: 11,
-    height: 14 / 11,
-    color: AppColor.steelGray400,
-  );
+  static TextStyle textStyleContentCaption() =>
+      defaultTextStyleInterFont.copyWith(
+        fontWeight: FontWeight.normal,
+        letterSpacing: 0,
+        fontSize: 11,
+        height: 14 / 11,
+        color: AppColor.steelGray400,
+      );
 
   static TextStyle textStyleInter600() => defaultTextStyleInterFont.copyWith(
-    fontWeight: FontWeight.w600,
-    letterSpacing: 0.0,
-    fontSize: 24,
-    height: 28.01 / 24,
-    color: AppColor.gray424244.withValues(alpha: 0.9),
-  );
+        fontWeight: FontWeight.w600,
+        letterSpacing: 0.0,
+        fontSize: 24,
+        height: 28.01 / 24,
+        color: AppColor.gray424244.withValues(alpha: 0.9),
+      );
 
   static TextStyle defaultTextStyleInterFont = TextStyle(
     fontFamily: ConstantsUI.fontApp,
@@ -332,7 +348,7 @@ class ThemeUtils {
   }
 
   static final AppBarTheme _appBarTheme = AppBarTheme(
-    color: Colors.white,
+    backgroundColor: Colors.white,
     elevation: 0,
     systemOverlayStyle: SystemUiOverlayStyle.light,
     iconTheme: const IconThemeData(color: Colors.black),
@@ -343,10 +359,8 @@ class ThemeUtils {
     toolbarTextStyle: defaultTextStyleInterFont,
   );
 
-  static const DividerThemeData _dividerTheme = DividerThemeData(
-    color: AppColor.colorDivider,
-    space: 0
-  );
+  static const DividerThemeData _dividerTheme =
+      DividerThemeData(color: AppColor.colorDivider, space: 0);
 
   static void setSystemLightUIStyle() {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
