@@ -161,6 +161,15 @@ class AuthenticationOIDCDataSourceImpl extends AuthenticationOIDCDataSource {
   }
 
   @override
+  Future<void> removeAuthenticationInfo() {
+    return Future.sync(() {
+      return _sessionStorageManager.remove(
+        OIDCConstant.authResponseKey,
+      );
+    }).catchError(_cacheExceptionThrower.throwException);
+  }
+
+  @override
   Future<void> deleteTokenOIDC() {
     return Future.sync(() async {
       return await _tokenOidcCacheManager.deleteTokenOidc();
