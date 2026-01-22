@@ -7,6 +7,9 @@
     const CODE_VERIFIER_KEY = "auth_code_verifier";
     window.onload = function () {
         try {
+tio            // Clear from sessionStorage since login-callback.html stores there
+            sessionStorage.removeItem(AUTH_RESPONSE_KEY);
+            // Also clear from localStorage for backwards compatibility
             localStorage.removeItem(AUTH_RESPONSE_KEY);
             localStorage.removeItem(CODE_VERIFIER_KEY);
             const params = new URLSearchParams(window.location.search)

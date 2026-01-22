@@ -2,6 +2,7 @@ import 'dart:core';
 
 import 'package:core/presentation/state/failure.dart';
 import 'package:core/presentation/state/success.dart';
+import 'package:core/utils/platform_info.dart';
 import 'package:dartz/dartz.dart';
 import 'package:tmail_ui_user/features/login/domain/repository/authentication_oidc_repository.dart';
 import 'package:tmail_ui_user/features/login/domain/repository/credential_repository.dart';
@@ -19,6 +20,8 @@ class DeleteAuthorityOidcInteractor {
         _credentialRepository.removeBaseUrl(),
         _authenticationOIDCRepository.deleteOidcConfiguration(),
         _authenticationOIDCRepository.deleteTokenOIDC(),
+        if (PlatformInfo.isWeb)
+          _authenticationOIDCRepository.removeAuthenticationInfo(),
       ]);
       return Right(DeleteAuthorityOidcSuccess());
     } catch (exception) {

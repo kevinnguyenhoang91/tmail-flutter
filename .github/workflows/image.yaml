@@ -1,9 +1,10 @@
 on:
-  push:
-    branches:
-      - "master"
-    tags:
-      - "v*.*.*"
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - "master"
+  #   tags:
+  #     - "v*.*.*"
 
 name: Build Docker images
 

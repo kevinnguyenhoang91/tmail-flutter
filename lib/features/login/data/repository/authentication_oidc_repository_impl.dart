@@ -103,6 +103,11 @@ class AuthenticationOIDCRepositoryImpl extends AuthenticationOIDCRepository {
   }
 
   @override
+  Future<void> removeAuthenticationInfo() {
+    return _oidcDataSource.removeAuthenticationInfo();
+  }
+
+  @override
   Future<void> deleteTokenOIDC() {
     return _oidcDataSource.deleteTokenOIDC();
   }

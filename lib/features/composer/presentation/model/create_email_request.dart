@@ -1,4 +1,3 @@
-
 import 'package:equatable/equatable.dart';
 import 'package:jmap_dart_client/jmap/account_id.dart';
 import 'package:jmap_dart_client/jmap/core/session/session.dart';
@@ -12,7 +11,6 @@ import 'package:tmail_ui_user/features/composer/presentation/model/screen_displa
 import 'package:tmail_ui_user/features/sending_queue/domain/model/sending_email.dart';
 
 class CreateEmailRequest with EquatableMixin {
-
   final Session session;
   final AccountId accountId;
   final EmailActionType emailActionType;
@@ -60,7 +58,7 @@ class CreateEmailRequest with EquatableMixin {
     this.ccRecipients,
     this.bccRecipients,
     this.replyToRecipients,
-    this.hasRequestReadReceipt = true,
+    this.hasRequestReadReceipt = false,
     this.isMarkAsImportant = false,
     this.identity,
     this.attachments,
